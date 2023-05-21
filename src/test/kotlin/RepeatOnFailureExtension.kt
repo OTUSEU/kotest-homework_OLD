@@ -4,8 +4,8 @@ import io.kotest.core.test.TestResult
 
 
 class RepeatOnFailureExtension : TestCaseExtension {
-    val maxRepeat = 5
-    var attempt = 1
+    private val maxRepeat = 5
+    private var attempt = 1
 
 
     override suspend fun intercept(testCase: TestCase, execute: suspend (TestCase) -> TestResult): TestResult {
